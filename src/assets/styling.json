@@ -1,0 +1,128 @@
+[
+    {
+        "id":1,
+        "description": "<Button />",
+        "descriptionStyle": null,
+        "buttonStyle": {
+            "background": "#E0E0E0",
+            "border":"none",
+            "borderRadius": "5px",
+            "boxShadow": "0px 2px 3px 0px #33333333"
+        }
+    },
+    {
+        "id":2,
+        "description": "&:hover, &:focus",
+        "descriptionStyle": {
+            "color": "#828282"
+        },
+        "buttonStyle": {
+            "background": "#AEAEAE",
+            "borderRadius": "5px",
+            "boxShadow": "0px 2px 3px 0px #33333333",
+            "border": "solid 1px"
+        }
+    },
+    {
+        "id":3,
+        "description": "<Button variant=”outline” />",
+        "descriptionStyle": null,
+        "buttonStyle": {
+            "background": "none",
+            "border":"none",
+            "borderRadius": "5px",
+            "boxShadow": "0px 2px 3px 0px #33333333",
+            "outline": "solid 1px #3D5AFE",
+            "color": "#3D5AFE"
+
+        }
+    },
+    {
+        "id":4,
+        "description": "&:hover, &:focus",
+        "descriptionStyle": {
+            "color": "#828282"
+        },
+        "buttonStyle": {
+            "background": "#2962FF1A",
+            "border":"none",
+            "borderRadius": "5px",
+            "boxShadow": "0px 2px 3px 0px #33333333",
+            "outline": "solid 1px #3D5AFE",
+            "color": "#3D5AFE"
+
+        }
+    },
+    {
+        "id":4,
+        "description": "<Button variant=”text” />",
+        "descriptionStyle": null,
+        "buttonStyle": {
+            "background": "none",
+            "border":"none",
+            "borderRadius": "5px",
+            "boxShadow": "0px 2px 3px 0px #33333333",
+            "color": "#3D5AFE"
+        }
+    },
+    {
+        "id":5,
+        "description": "&:hover, &:focus",
+        "descriptionStyle": {
+            "color": "#828282"
+        },
+        "buttonStyle": {
+            "background": "#2962FF1A",
+            "border":"none",
+            "borderRadius": "5px",
+            "boxShadow": "0px 2px 3px 0px #33333333",
+            "color": "#3D5AFE"
+
+        }
+    },
+    {
+        "id":6,
+        "description": "<Button disableShadow />",
+        "descriptionStyle": null,
+        "buttonStyle": {
+            "background": "#3D5AFE",
+            "border":"none",
+            "borderRadius": "5px",
+            "color": "#FFFFFF"
+        }
+    },
+    {
+        "id":7,
+        "description": "",
+        "descriptionStyle": null,
+        "buttonStyle": {
+            "display":"none"
+        }
+    },
+    {
+        "id":8,
+        "description": "<Button disabled />",
+        "descriptionStyle": null,
+        "buttonStyle": {
+            "background": "#E0E0E0",
+            "border":"none",
+            "borderRadius": "5px",
+            "color": "#9E9E9E"
+        }
+    },
+    {
+        "id":9,
+        "description": "<Button variant=”text” disabled />",
+        "descriptionStyle": null,
+        "buttonStyle": {
+            "background": "#2962FF1A",
+            "border":"none",
+            "borderRadius": "5px",
+            "boxShadow": "0px 2px 3px 0px #33333333",
+            "color": "#9E9E9E"
+        }
+    } 
+]
+
+
+

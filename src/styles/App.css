@@ -1,0 +1,67 @@
+.App {
+  display: grid;
+  grid-template-columns: 20vh auto;
+  height: 100vh;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: #FAFBFD;
+  height: 100vh;
+  font-weight: bold;  
+  overflow-y: none;
+  position: fixed;
+}
+
+.Dev-title {
+  color: orange;
+  margin-left: 1.5rem;
+}
+
+.side-opt {
+  padding: 5rem 0 0 2rem;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.side-links {
+  color: #9E9E9E;
+  text-decoration: none;
+}
+
+.side-links:focus {
+  color: #090F31
+}
+
+.containers{
+  background: #FAFBFD;
+  margin-left: 3rem;  
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  padding-right: 20rem;
+}
+
+.button-title {
+  padding-left: 2rem;
+  font-weight: 500;
+  font-size: 24px;
+  color:#4F4F4F;
+}
+
+.button-square {
+  padding: 1rem;
+  margin:1rem;
+}
+
+.button-square > button {
+  padding: 0.5rem 1rem;
+}
