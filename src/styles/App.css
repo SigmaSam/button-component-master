@@ -39,15 +39,16 @@
 
 .containers{
   background: #FAFBFD;
-  margin-left: 3rem;  
+  margin-left: 2rem;
+  max-width: 80%;
 }
 
 .button-container {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4,30%);
+  grid-template-rows: repeat(4, 1fr);
   justify-content: space-between;
-  padding-right: 20rem;
+
 }
 
 .button-title {
@@ -57,10 +58,7 @@
   color:#4F4F4F;
 }
 
-.button-square {
-  padding: 1rem;
-  margin:1rem;
-}
+
 
 .button-square > button {
   padding: 0.5rem 1rem;
