@@ -1,6 +1,6 @@
 .App {
   display: grid;
-  grid-template-columns: 20vh auto;
+  grid-template-columns: 20% 80%;
   height: 100vh;
 }
 
@@ -41,25 +41,63 @@
   background: #FAFBFD;
   margin-left: 2rem;
   max-width: 80%;
+  text-align: center;
 }
 
-.button-container {
+.buttons-container {
+  height: 90vh;
   display: grid;
-  grid-template-columns: repeat(4,30%);
-  grid-template-rows: repeat(4, 1fr);
-  justify-content: space-between;
-
+  grid-template-rows: repeat(3,33%);
+  text-align: center;
 }
 
-.button-title {
-  padding-left: 2rem;
+.button-title {  
   font-weight: 500;
   font-size: 24px;
   color:#4F4F4F;
 }
 
+.button-options {
+  display:grid;
 
+  text-align: center;
 
-.button-square > button {
+}
+
+.button-colors {
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-box > p {
+  font-family: Ubuntu Mono;
+  font-weight: bold;
+  color: #333333;
+  font-size: 1.3rem;
+}
+
+.button-box > button {
   padding: 0.5rem 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.button-box > button:hover {
+  filter: brightness(.8);
+}
+
+@media   (max-width: 800px) {
+  .side-nav {
+    display: none;
+  }
+  .containers{
+    background: #FAFBFD;
+    margin-left: -2rem;
+  ;
+  }
 }
