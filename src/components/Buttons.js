@@ -1,17 +1,12 @@
 /* eslint-disable default-case */
 import React, { useState } from 'react'
 import { GithubPicker } from 'react-color'
+import Default from './Default';
+import styling from '../assets/styling.json'
 
 function  Buttons() {
 /* States Definitions*/  
-  const [defButton, setDefButton] = useState({
-     description: "<Button />",
-     style: {
-      padding:"0.5rem 1rem",
-      background: "#E0E0E0",      
-      borderRadius: "5px",
-    }
-  });
+  
 
   const [outButton, setOutButton] = useState({
     description: "<Button variant=”outline” />",
@@ -34,15 +29,21 @@ function  Buttons() {
      }
    })
 
+   console.log(styling[0].default)
+  const [data, setData] = useState({ 
+    color: "#E0E0E0",
+    default: styling[0].default
+  
+  })
+
+  
   /*Function Definitions*/
   const handleChangeComplete  = (color) => {
-        setDefButton(prevState => ({
-          ...prevState,
-          style: {
-            ...prevState.style,
-            background: color.hex
-          }    
+        setData(prevData => ({
+          ...prevData,
+          color:color.hex  
         }));
+
         setOutButton(prevState => ({
           ...prevState,
           style: {
@@ -60,22 +61,9 @@ function  Buttons() {
         }));          
   }
 
-  const handleHover = (e) => {
-    
+  const handleHover = (e) => {    
     switch (e.target.name) {
-      case 'defButton':
-        if (defButton.description === "<Button />")  {
-          setDefButton(prevState => ({
-            ...prevState,
-            description: "&:hover,&:focus"
-          }))
-        } else if (defButton.description !== "<Button />") {
-          setDefButton(prevState => ({
-            ...prevState,
-            description: "<Button />"
-        }))}
-        break;
-      
+
       case 'outButton':
         if (outButton.description === "<Button variant=”outline” />")  {
           setOutButton(prevState => ({
@@ -104,9 +92,6 @@ function  Buttons() {
     }
 }
 
- 
-
-
    return (
     <div>
       <p className="button-title">Buttons</p>
@@ -114,25 +99,17 @@ function  Buttons() {
         <div className="button-colors">
           <label htmlFor="color">Pick a Color</label>
           <GithubPicker
-            color={ defButton.style.background }
+            color={data.color}
             onChangeComplete={ handleChangeComplete }
           />
         </div>
       </div>
       
-
-      <div className="buttons-container">
-        <div className="button-box">
-          <p>{defButton.description}</p>
-          <button 
-            name='defButton'
-            style={defButton.style}
-            onMouseEnter={handleHover}
-            onMouseLeave={handleHover}
-          >
-            Default
-          </button>
-        </div>
+      <div className="buttons-container">  
+        <Default
+          color={data.color}
+          data={data.default}
+        />
 
         <div className="button-box">
           <p>{outButton.description}</p>
