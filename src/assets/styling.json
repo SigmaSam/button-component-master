@@ -1,12 +1,37 @@
 [
     {
         "default":{
+            "title":"Default",
             "description": "<Button />",
+            "style": {                
+                "background": "#E0E0E0"
+            },
+            "disabled": false,
+            "disStyle": {
+                "background":"#E0E0E0",
+                "color":"#9E9E9E"
+            },
+            "iconLeft": false,
+            "iconRight": false
+        }
+    },
+    {   "outline":{
+            "title":"Outline",
+            "description": "<Button variant=”outline” />",
             "style": {
-                "padding":"0.5rem 1rem",
-                "background": "#E0E0E0",      
-                "borderRadius": "5px"
+                "background": "none",     
+                "outline": "solid 2px #3D5AFE",
+                "color": "#3D5AFE"
             }
         }
+    },
+    {   "text":{
+            "title":"Text",
+            "description": "<Button variant=”text” />",
+            "style": {
+                "background": "none",  
+                "color": "#3D5AFE"
+            }
+        }    
     }
 ]
