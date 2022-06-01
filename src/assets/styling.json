@@ -22,7 +22,14 @@
                 "background": "none",     
                 "outline": "solid 2px #3D5AFE",
                 "color": "#3D5AFE"
-            }
+            },
+            "disabled": false,
+            "disStyle": {
+                "color":"#9E9E9E"
+                    
+            },
+            "iconLeft": false,
+            "iconRight": false
         }
     },
     {   "text":{
@@ -31,7 +38,14 @@
             "style": {
                 "background": "none",  
                 "color": "#3D5AFE"
-            }
+            },
+            "disabled": false,
+            "disStyle": {
+                "background":"#E0E0E0",
+                "color":"#9E9E9E"
+            },
+            "iconLeft": false,
+            "iconRight": false
         }    
     }
 ]

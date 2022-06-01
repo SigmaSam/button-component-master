@@ -22,9 +22,9 @@ function  Buttons() {
           color:color.hex  
         }));         
   }
-
+  
    return (
-    <div>
+    <div className="container">
       <div className="header">
         <p className="button-title">Buttons</p>
         <div className="button-options">

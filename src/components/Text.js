@@ -1,10 +1,15 @@
 import React, { useState,useEffect } from 'react'
+import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
 
 function Text({color,data}) {
     /* State Definition*/   
     const [button, setButton] = useState({
         description: data.description,
-        style: data.style
+        style: data.style,
+        disabled: data.disabled,
+        disStyle: data.disStyle,
+        iconLeft: data.iconLeft,
+        iconRight: data.iconRight,
     });
 
     /* Funtions*/
@@ -31,19 +36,98 @@ function Text({color,data}) {
             description: "<Button variant=”text” />"
         }))
     }
+    const toggleState = (e) => {
+        const {name} = e.target
+        setButton(prevState => ({
+            ...prevState,
+            [name]: !prevState[name],
+        }))
+    }
+
+    const toggleIcon = (e) => {
+        if (button.disabled) {return}
+        const {name} = e.target;
+        name ===  "iconLeft" ? setButton(prevState => ({
+            ...prevState,
+            iconLeft: !prevState[name],
+            iconRight: false
+        })) :
+        setButton(prevState => ({
+            ...prevState,
+            iconRight: !prevState[name],
+            iconLeft: false
+        }))
+    }
+
+    const buttonPadding = (e) => {
+        switch (e.target.value) {
+            case "sm":
+                setButton(prevState => ({
+                    ...prevState,
+                    style:{
+                        ...prevState.style,
+                        padding: "0.3rem 0.8rem"
+                        }
+                }))
+                break
+
+            case "md":
+                setButton(prevState => ({
+                    ...prevState,
+                    style:{
+                        ...prevState.style,
+                        padding: "0.5rem 1rem"
+                        }
+                }))
+                break
+
+            case "lg":
+                setButton(prevState => ({
+                    ...prevState,
+                    style:{
+                        ...prevState.style,
+                        padding: "0.7rem 1rem"
+                        }
+                }))
+                break
+
+            default: 
+                setButton(prevState => ({
+                    ...prevState,
+                    style:{
+                        ...prevState.style,
+                        padding: "0.5rem 1rem"
+                    }
+                }))
+        }
+    }
 
   return (
     <div className="button-box">
             <p>{button.description}</p>
-            <button 
-                name='defButton'
-                style={button.style}
+            <button                
+                style={ button.disabled ? button.disStyle : button.style}
                 onMouseEnter={hoverIn}
                 onMouseLeave={hoverOut}
-            >
-                {data.title}
+            >                
+               {button.iconLeft ? <FiChevronLeft  className="button-icons"/> :null}
+               {data.title}
+               {button.iconRight ? <FiChevronRight className="button-icons"/> : null }
             </button>
-        </div>
+            <div className="button-variants">
+                <button value={"sm"} onClick={buttonPadding}>Small</button>
+                <button value={"md"} onClick={buttonPadding}>Medium</button>
+                <button value={"lg"} onClick={buttonPadding}>Large</button>
+                <button
+                    name="disabled"
+                    onClick={toggleState}
+                >
+                    { button.disabled ? "Enable" : "Disable" }
+                </button>
+                <button name="iconLeft"  onClick={toggleIcon} >Icon Left</button>
+                <button name="iconRight"  onClick={toggleIcon} >Icon Right</button>
+            </div>
+    </div>
   )
 }
 

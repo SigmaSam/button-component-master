@@ -1,6 +1,5 @@
 import React,{useEffect, useState}from 'react'
-import Left from '../assets/left.svg'
-import Right from '../assets/right.svg'
+import {FiChevronLeft, FiChevronRight} from "react-icons/fi";
 
 function Default({color,data}) {
    
@@ -13,8 +12,6 @@ function Default({color,data}) {
         iconLeft: data.iconLeft,
         iconRight: data.iconRight,
     });
-    console.log(data.iconLeft)
-    console.log(data.iconRight)
     /* Funtions*/
     useEffect(() => {
         setButton(prevState => ({
@@ -40,38 +37,27 @@ function Default({color,data}) {
         }))
     }
 
-    const toggleDisable = (e) => {
+    const toggleState = (e) => {
+        const {name} = e.target
         setButton(prevState => ({
             ...prevState,
-            disabled: !prevState.disabled
+            [name]: !prevState[name],
         }))
     }
 
-    const toggleIcons = (e) => {
-   
-        switch (e.target.value) {
-            case "right":
-             
-                setButton(prevState => ({
-                    ...prevState,
-                    iconLeft: false,
-                    iconRight: true
-                }))
-            break
-            case "left":
-                setButton(prevState => ({
-                    ...prevState,
-                    iconLeft: true,
-                    iconRight: false
-                }))
-            break
-            default:
-                setButton(prevState => ({
-                    ...prevState,
-                    iconLeft: false,
-                    iconRight: false
-                }))
-        }
+    const toggleIcon = (e) => {
+        if (button.disabled) {return}
+        const {name} = e.target;
+        name ===  "iconLeft" ? setButton(prevState => ({
+            ...prevState,
+            iconLeft: !prevState[name],
+            iconRight: false
+        })) :
+        setButton(prevState => ({
+            ...prevState,
+            iconRight: !prevState[name],
+            iconLeft: false
+        }))
     }
 
     const buttonPadding = (e) => {
@@ -117,7 +103,6 @@ function Default({color,data}) {
         }
     }
 
-
     return (
         <div className="button-box">
             <p>{button.description}</p>
@@ -125,18 +110,23 @@ function Default({color,data}) {
                 style={ button.disabled ? button.disStyle : button.style}
                 onMouseEnter={hoverIn}
                 onMouseLeave={hoverOut}
-            >
-               {data.iconLeft ? <img src={Left} alt="Left"/> : null}
+            >                
+               {button.iconLeft ? <FiChevronLeft  className="button-icons"/> :null}
                {data.title}
-               {data.iconRight ? <img src={Right} alt="Right"/> : null}
+               {button.iconRight ? <FiChevronRight className="button-icons"/> : null }
             </button>
             <div className="button-variants">
                 <button value={"sm"} onClick={buttonPadding}>Small</button>
                 <button value={"md"} onClick={buttonPadding}>Medium</button>
                 <button value={"lg"} onClick={buttonPadding}>Large</button>
-                <button onClick={toggleDisable}>{ button.disabled ? "Enable" : "Disable" }</button>
-                <button value={"left"} onClick={toggleIcons} >Icon Right</button>
-                <button value={"right"} onClick={toggleIcons} >Icon Left</button>
+                <button
+                    name="disabled"
+                    onClick={toggleState}
+                >
+                    { button.disabled ? "Enable" : "Disable" }
+                </button>
+                <button name="iconLeft"  onClick={toggleIcon} >Icon Left</button>
+                <button name="iconRight"  onClick={toggleIcon} >Icon Right</button>
             </div>
         </div>
     )

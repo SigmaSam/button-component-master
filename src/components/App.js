@@ -6,12 +6,7 @@ import Buttons from './Buttons'
 function App() {
   return (
     <div className="App">
-      <section> 
-        <Sidebar />
-      </section>
-      <section className="containers">
         <Buttons />
-      </section>
     </div>
   );
 }
