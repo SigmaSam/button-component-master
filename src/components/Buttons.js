@@ -5,6 +5,7 @@ import styling from '../assets/styling.json'
 import Default from './Default';
 import Outline from './Outline'
 import Text from './Text'
+import Options from './Options';
 
 function  Buttons() {
 /* State Definition*/    
@@ -12,17 +13,25 @@ function  Buttons() {
     color: "",
     default: styling[0].default,
     outline: styling[1].outline,
-    text: styling[2].text  
+    text: styling[2].text,
+    options: styling[3]
   })
-  
-  /*Function Definitions*/
+  // console.log(data.options)
+ /*Function Definitions*/
   const handleChangeComplete  = (color) => {
         setData(prevData => ({
           ...prevData,
           color:color.hex  
         }));         
   }
-  
+
+  const handlePadding = (e) => {
+    setData(prevData => ({
+      ...prevData,
+      padding: e.target.value 
+    }));  
+  }
+
    return (
     <div className="container">
       <div className="header">
@@ -52,6 +61,8 @@ function  Buttons() {
           data={data.text}
         />
       </div>
+
+        <Options data={data.options}/>
     </div>    
   )
 }
