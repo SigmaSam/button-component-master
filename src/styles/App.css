@@ -1,0 +1,254 @@
+/*Ids*/
+#def {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#defHover {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#defPrimary {
+  grid-column: 2;
+  grid-row:1;
+}
+
+#defPrimaryHover {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 2rem;
+}
+
+#secondary {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#secondaryHover {
+  grid-column: 3;
+  grid-row: 2;
+  margin-top: 2rem;
+}
+
+#danger {
+  grid-column: 4;
+  grid-row: 1;
+}
+#dangerHover {
+  grid-column: 4;
+  grid-row: 2;
+  margin-top: 2rem; 
+}
+/* Classes */
+.App {
+
+  height:100%
+}
+
+.side-nav {
+  display: flex;
+  width:20%;
+  flex-direction: column;
+  padding: 1rem;
+  background: #FAFBFD;
+  height: 100vh;
+  font-weight: bold;  
+  overflow-y: none;
+  position: fixed;
+}
+
+.Dev-title {
+  color: orange;
+  margin-left: 1.5rem;
+}
+
+.side-opt {
+  padding: 5rem 0 0 2rem;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.side-links {
+  color: #9E9E9E;
+  text-decoration: none;
+}
+
+.side-links:focus {
+  color: #090F31
+}
+
+.header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  background: #FAFBFD;
+}
+
+.container{
+  padding-top: 1rem;
+  margin-top: 10rem;
+  background: #FAFBFD;
+  text-align: center;
+}
+
+.buttons-container {
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content:center;
+  align-items: center;
+}
+.options-container {
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content:center;
+  align-items: center;
+}
+
+.button-title {  
+  font-weight: 500;
+  font-size: 24px;
+  color:#4F4F4F;
+}
+
+.button-options {
+  display:grid;
+  text-align: center;
+}
+
+.button-colors {
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.button-box > p {
+  font-family: Ubuntu Mono;
+  font-weight: 600;
+  color: #333333;
+  font-size: 1.2rem;
+}
+
+.button-box > button {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.5rem;   
+}
+
+.button-icons {
+  line-height: 2rem;
+}
+
+.button-box > button:hover {
+  filter: brightness(.8);
+}
+
+.button-variants {
+  width:50%;
+  margin: 1rem auto;
+  display:grid;
+  grid-template-columns: repeat(3,5rem);
+  justify-content: center;
+}
+
+.button-variants > button {
+  border-radius: 5px;
+  background-color: "#E0E0E0";
+}
+
+.option-box > p {
+  font-family: Ubuntu Mono;
+  font-weight: 600;
+  color: #333333;
+  font-size: 1.2rem;
+}
+
+.option-box > button {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.5rem;   
+}
+
+.option-icons {
+  line-height: 2rem;
+}
+
+@media   (max-width: 800px) {
+
+  /*Ids*/
+  #def {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #defHover {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #defPrimary {
+    grid-column: 1;
+    grid-row:3
+  }
+
+  #defPrimaryHover {
+    grid-column: 1;
+    grid-row: 4;
+    margin-top: 0;
+  }
+
+  #secondary {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  #secondaryHover {
+    grid-column: 1;
+    grid-row: 6;
+    margin-top: 0rem;
+  }
+
+  #danger {
+    grid-column: 1;
+    grid-row: 7;
+  }
+  #dangerHover {
+    grid-column: 1;
+    grid-row: 8;
+    margin-top: 0rem;
+  }
+  /* Classes */
+  .container {
+    width: 100%;
+  }
+  .buttons-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .options-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, 1fr);
+  }
+  .button-box > p {
+    font-size: 1.1rem;
+  }
+}

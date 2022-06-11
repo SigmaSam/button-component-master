@@ -1,0 +1,119 @@
+[
+    {
+        "default":{
+            "title":"Default",
+            "description": "<Button />",
+            "style": {                
+                "background": "#E0E0E0"
+            },
+            "disabled": false,
+            "disStyle": {
+                "background":"#E0E0E0",
+                "color":"#9E9E9E"
+            },
+            "iconLeft": false,
+            "iconRight": false
+        }
+    },
+    {   "outline":{
+            "title":"Outline",
+            "description": "<Button variant=”outline” />",
+            "style": {
+                "background": "none",     
+                "outline": "solid 2px #3D5AFE",
+                "color": "#3D5AFE"
+            },
+            "disabled": false,
+            "disStyle": {
+                "color":"#9E9E9E"
+                    
+            },
+            "iconLeft": false,
+            "iconRight": false
+        }
+    },
+    {   "text":{
+            "title":"Text",
+            "description": "<Button variant=”text” />",
+            "style": {
+                "background": "none",  
+                "color": "#3D5AFE"
+            },
+            "disabled": false,
+            "disStyle": {
+                "background":"#E0E0E0",
+                "color":"#9E9E9E"
+            },
+            "iconLeft": false,
+            "iconRight": false
+        }    
+    },
+    [
+       {    "id":"def",
+            "title":"Default",
+            "description": "<Button color=”default” />",
+            "style": {
+                "background": "#E0E0E0",  
+                "color": "#3F3F3F"
+            }
+        },
+        {   "id": "defHover",
+            "title":"Default",
+            "description": "&:hover, &:focus",
+            "style": {
+                "background": "#AEAEAE",  
+                "color": "#3F3F3F"
+            }
+        },
+        {   "id": "defPrimary",
+            "title":"Default",
+            "description": "<Button color=”primary” />",
+            "style": {
+                "background": "#2962FF",  
+                "color": "#FFFFFF"
+            }
+        },
+        {   "id": "defPrimaryHover",
+            "title":"Default",
+            "description": "",
+            "style": {
+                "background": "#0039CB",  
+                "color": "#FFFFFF"
+            }
+        },
+        {   "id": "secondary",
+            "title":"Secondary",
+            "description": "<Button color=”secondary” />",
+            "style": {
+                "background": "#455A64",  
+                "color": "#FFFFFF"
+            }
+        },
+        {   "id": "secondaryHover",
+            "title":"Secondary",
+            "description": "",
+            "style": {
+                "background": "#1C313A",  
+                "color": "#FFFFFF"
+            }
+        },
+        {   "id": "danger",
+            "title":"Danger",
+            "description": "<Button color=”danger” />",
+            "style": {
+                "background": "#D32F2F",  
+                "color": "#FFFFFF"
+            }
+        },
+        {   "id": "dangerHover",
+            "title":"Danger",
+            "description": "",
+            "style": {
+                "background": "#9A0007",  
+                "color": "#FFFFFF"
+            }
+        }
+        
+        
+    ]
+]
