@@ -16,20 +16,12 @@ function  Buttons() {
     text: styling[2].text,
     options: styling[3]
   })
-  // console.log(data.options)
  /*Function Definitions*/
   const handleChangeComplete  = (color) => {
         setData(prevData => ({
           ...prevData,
           color:color.hex  
         }));         
-  }
-
-  const handlePadding = (e) => {
-    setData(prevData => ({
-      ...prevData,
-      padding: e.target.value 
-    }));  
   }
 
    return (
