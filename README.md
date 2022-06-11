@@ -12,7 +12,7 @@ This single page app was build with the idea of making a button component that c
 
 ![Tracker](./src/assets/Image.png)
 
-[Live Version]()
+[Live Version](https://buttoncomponentreact.netlify.app/)
 
 ## Getting Started
 
