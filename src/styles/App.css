@@ -42,42 +42,7 @@
 }
 /* Classes */
 .App {
-
   height:100%
-}
-
-.side-nav {
-  display: flex;
-  width:20%;
-  flex-direction: column;
-  padding: 1rem;
-  background: #FAFBFD;
-  height: 100vh;
-  font-weight: bold;  
-  overflow-y: none;
-  position: fixed;
-}
-
-.Dev-title {
-  color: orange;
-  margin-left: 1.5rem;
-}
-
-.side-opt {
-  padding: 5rem 0 0 2rem;
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.side-links {
-  color: #9E9E9E;
-  text-decoration: none;
-}
-
-.side-links:focus {
-  color: #090F31
 }
 
 .header {
@@ -131,7 +96,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 .button-box > p {
   font-family: Ubuntu Mono;

@@ -27,7 +27,7 @@ function  Buttons() {
    return (
     <div className="container">
       <div className="header">
-        <p className="button-title">Buttons</p>
+        <p>Buttons</p>
         <div className="button-options">
           <div className="button-colors">
             <label htmlFor="color">Pick a Color</label>
